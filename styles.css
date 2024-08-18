@@ -14,7 +14,6 @@ html {
 
 body {
   font-family: "Aref Ruqaa Ink", serif;
-  font-size: 0.938rem;
   background-color: hsl(0, 0%, 100%);
 }
 
@@ -38,7 +37,7 @@ a {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: hsl(0, 0%, 0%);
+  background-color: #111e40;
   z-index: 100;
 }
 
@@ -213,7 +212,7 @@ a {
   }
 
   .nav__link {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .nav__link i {
