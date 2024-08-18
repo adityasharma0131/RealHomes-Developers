@@ -308,13 +308,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .heading1 {
-  font-size: 5rem; /* Adjust as needed */
+  font-size: 2rem; /* Adjust as needed */
   font-weight: 400;
 }
 
 .heading2 {
-  color: #0085ff;
-  font-size: 13rem; /* Larger font for emphasis */
+  font-size: 3rem; /* Larger font for emphasis */
   font-weight: 700;
   margin-top: 0.5rem;
 }
