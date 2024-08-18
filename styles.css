@@ -37,10 +37,11 @@ body::-webkit-scrollbar-thumb {
   background-color: #111e40;
   outline: 1px solid #111e40;
 }
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1120px;
-  margin-inline: 1.5rem;
+  margin: 0 auto;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -54,33 +55,30 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav {
-  position: relative;
-  height: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 3rem;
 }
 
-.nav__logo {
-  color: hsl(0, 0%, 100%);
-  font-weight: 500;
+.nav__logo img {
+  max-width: 100%;
 }
 
 .nav__close,
 .nav__toggle {
   display: flex;
-  color: hsl(0, 0%, 100%);
+  color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-/* Navigation for mobile devices */
 @media screen and (max-width: 1150px) {
   .nav__menu {
     position: fixed;
     left: -100%;
     top: 0;
-    background-color: hsl(0, 0%, 0%);
+    background-color: #000;
     width: 100%;
     height: 100%;
     padding: 6rem 3.5rem 4.5rem;
@@ -96,36 +94,21 @@ body::-webkit-scrollbar-thumb {
     transition: transform 0.4s ease-out, visibility 0.4s;
   }
 
-  .nav__item:nth-child(1) {
-    transition-delay: 0.1s;
-  }
-  .nav__item:nth-child(2) {
-    transition-delay: 0.2s;
-  }
-  .nav__item:nth-child(3) {
-    transition-delay: 0.3s;
-  }
-  .nav__item:nth-child(4) {
-    transition-delay: 0.4s;
-  }
-  .nav__item:nth-child(5) {
-    transition-delay: 0.5s;
-  }
-}
-
-.nav__list,
-.nav__social {
-  display: flex;
+  .nav__item:nth-child(1) { transition-delay: 0.1s; }
+  .nav__item:nth-child(2) { transition-delay: 0.2s; }
+  .nav__item:nth-child(3) { transition-delay: 0.3s; }
+  .nav__item:nth-child(4) { transition-delay: 0.4s; }
 }
 
 .nav__list {
+  display: flex;
   flex-direction: column;
   row-gap: 3rem;
 }
 
 .nav__link {
   position: relative;
-  color: hsl(0, 0%, 100%);
+  color: #fff;
   font-size: 1.5rem;
   font-weight: 500;
   display: inline-flex;
@@ -153,11 +136,10 @@ body::-webkit-scrollbar-thumb {
   bottom: -6px;
   width: 0;
   height: 2px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: #fff;
   transition: width 0.4s ease-out;
 }
 
-/* Animation link on hover */
 .nav__link:hover span {
   margin-left: 2.5rem;
 }
@@ -171,7 +153,6 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
-/* Sibling fade animation */
 .nav__list:has(.nav__link:hover) .nav__link:not(:hover) {
   opacity: 0.4;
 }
@@ -183,11 +164,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav__social {
+  display: flex;
   column-gap: 1rem;
 }
 
 .nav__social-link {
-  color: hsl(0, 0%, 100%);
+  color: #fff;
   font-size: 1.5rem;
   transition: transform 0.4s;
 }
@@ -196,93 +178,95 @@ body::-webkit-scrollbar-thumb {
   transform: translateY(-0.25rem);
 }
 
-/* Show menu */
 .show-menu {
   left: 0;
 }
 
-/* Animation link when displaying menu */
 .show-menu .nav__item {
   visibility: visible;
   transform: translateX(0);
 }
 
-/* ==========HERO SECTION========== */
-.hero-section {
-  margin-top: 3rem;
+/* ========== HERO SECTION ========== */
+.homepage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  object-fit: cover;
-}
-
-.slideshow-container {
-  max-width: 100%;
-  position: relative;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 92vh;
-  object-fit: cover;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  display: block;
+  animation: change 25s infinite ease-in-out;
 }
 
-.hero-image {
+.homepage-img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  transition: opacity 2.5s ease-in-out;
+  object-fit: cover;
+  z-index: -1;
 }
 
-.fade {
-  animation: fadeEffect 25s infinite; /* Increase duration to allow more time for transitions */
-}
-
-/* Keyframes for image fading */
-@keyframes fadeEffect {
+@keyframes change {
   0% {
-    opacity: 1;
+    background-image: url("/assets/pikaso_texttoimage_35mm-film-photography-Aerial-depiction-of-Mumbais-.png");
   }
   20% {
-    opacity: 1;
+    background-image: url("/assets/pikaso_texttoimage_35mm-film-photography-Mumbai-modern-residency-buil.png");
   }
-  25% {
-    opacity: 0;
+  40% {
+    background-image: url("/assets/pikaso_texttoimage_35mm-film-photography-Mumbai-modern-residency-buil (1).png");
+  }
+  60% {
+    background-image: url("/assets/pikaso_texttoimage_35mm-film-photography-Perspective-from-above-of-Mu (1).png");
+  }
+  80% {
+    background-image: url("/assets/pikaso_texttoimage_35mm-film-photography-Topdown-perspective-of-Mumba.png");
   }
   100% {
-    opacity: 0;
+    background-image: url("/assets/pikaso_texttoimage_Aerial-depiction-of-Mumbais-contemporary-residenti.png");
   }
 }
 
-/* Custom delay for each image */
-.hero-image:nth-child(1) {
-  animation-delay: 0s;
+/* Hero Logo */
+.hero-logo {
+  width: 40%;
+  height: auto;
 }
 
-.hero-image:nth-child(2) {
-  animation-delay: 5s;
+@media (max-width: 1200px) {
+  .hero-logo {
+    width: 55%;
+  }
 }
 
-.hero-image:nth-child(3) {
-  animation-delay: 10s;
+@media (max-width: 900px) {
+  .hero-logo {
+    width: 70%;
+  }
 }
 
-.hero-image:nth-child(4) {
-  animation-delay: 15s;
+@media (max-width: 700px) {
+  .hero-logo {
+    width: 100%;
+  }
 }
 
-.hero-image:nth-child(5) {
-  animation-delay: 20s;
+@media (max-width: 500px) {
+  .hero-logo {
+    width: 40rem;
+  }
 }
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (min-width: 1150px) {
   .container {
-    margin-inline: auto;
+    margin: 0 auto;
   }
 
   .nav {
