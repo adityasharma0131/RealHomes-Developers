@@ -95,10 +95,18 @@ body::-webkit-scrollbar-thumb {
     transition: transform 0.4s ease-out, visibility 0.4s;
   }
 
-  .nav__item:nth-child(1) { transition-delay: 0.1s; }
-  .nav__item:nth-child(2) { transition-delay: 0.2s; }
-  .nav__item:nth-child(3) { transition-delay: 0.3s; }
-  .nav__item:nth-child(4) { transition-delay: 0.4s; }
+  .nav__item:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .nav__item:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .nav__item:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  .nav__item:nth-child(4) {
+    transition-delay: 0.4s;
+  }
 }
 
 .nav__list {
@@ -263,6 +271,88 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+/* ========== ABOUT US SECTION ========== */
+.weare {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4; /* Light background color for contrast */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem; /* Added padding for spacing */
+}
+
+.bgbox {
+  background-color: #ffffff; /* White background for the content box */
+  color: #0085ff; /* Accent color for text and border */
+  border: 2px solid #0085ff; /* Border color */
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px; /* Limit the width of the content box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.heading1,
+.heading2 {
+  margin: 0;
+  font-family: "Poppins", sans-serif; /* Modern font for headings */
+}
+
+.heading1 {
+  font-size: 5rem; /* Adjust as needed */
+  font-weight: 400;
+}
+
+.heading2 {
+  color: #0085ff;
+  font-size: 13rem; /* Larger font for emphasis */
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.para {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  color: #333; /* Darker text color for readability */
+}
+
+@media (max-width: 768px) {
+  .heading1 {
+    font-size: 1.5rem;
+  }
+
+  .heading2 {
+    font-size: 2.5rem;
+  }
+
+  .para {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading1 {
+    font-size: 1.2rem;
+  }
+
+  .heading2 {
+    font-size: 2rem;
+  }
+
+  .para {
+    font-size: 0.8rem;
+  }
+}
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (min-width: 1150px) {
