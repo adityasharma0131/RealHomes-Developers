@@ -279,7 +279,7 @@ body::-webkit-scrollbar-thumb {
 /* ========== ABOUT US SECTION ========== */
 .weare {
   color: #1e2d54;
-  min-height: 100vh;
+  min-height: 60vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -300,7 +300,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .heading1,
-.heading2 {
+.heading2,
+.heading3 {
   margin: 0;
   font-family: "Poppins", sans-serif; /* Modern font for headings */
 }
@@ -313,6 +314,11 @@ body::-webkit-scrollbar-thumb {
 .heading2 {
   font-size: 5rem; /* Larger font for emphasis */
   font-weight: 500;
+  margin-top: 0.5rem;
+}
+.heading3 {
+  font-size: 3rem; /* Larger font for emphasis */
+  font-weight: 400;
   margin-top: 0.5rem;
 }
 
@@ -350,6 +356,87 @@ body::-webkit-scrollbar-thumb {
     font-size: 0.8rem;
   }
 }
+/* ========== NUMBERING SECTION ========== */
+.numbers {
+  min-height: 30vh;
+  background-size: cover;
+  background-image: url("assets/pikaso_texttoimage_Aerial-depiction-of-Mumbais-contemporary-residenti.png");
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.number-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-list li {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(
+    17,
+    25,
+    40,
+    0.6
+  ); /* Slightly increased opacity for better readability */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Increased border visibility */
+  padding: 25px; /* Slightly increased padding for more space */
+  border-radius: 15px; /* Softer, more rounded edges */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Added a more pronounced shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for both transform and shadow */
+}
+
+.number-list li:hover {
+  transform: translateY(-10px) scale(1.05); /* Adds a slight scaling effect on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover for a more dynamic effect */
+}
+
+.number-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #ede6db;
+}
+
+.number-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ede6db;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 768px) {
+  .number-list ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .number-list li {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (min-width: 1150px) {
