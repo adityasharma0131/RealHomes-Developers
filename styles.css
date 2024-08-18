@@ -14,7 +14,7 @@ html {
 
 body {
   font-family: "Aref Ruqaa Ink", serif;
-  background-color: hsl(0, 0%, 100%);
+  background-color: #ede6db;
 }
 
 ul {
@@ -23,6 +23,11 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+*::selection {
+  background: #a20a3a;
+  color: #fff;
 }
 
 body::-webkit-scrollbar {
@@ -273,6 +278,7 @@ body::-webkit-scrollbar-thumb {
 
 /* ========== ABOUT US SECTION ========== */
 .weare {
+  color: #1e2d54;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
@@ -304,9 +310,9 @@ body::-webkit-scrollbar-thumb {
   font-weight: 400;
 }
 
-.heading2 { 
+.heading2 {
   font-size: 5rem; /* Larger font for emphasis */
-  font-weight: 700;
+  font-weight: 500;
   margin-top: 0.5rem;
 }
 
@@ -314,7 +320,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 1rem;
   line-height: 1.6;
   margin-top: 1rem;
-  color: #333; /* Darker text color for readability */
+  color: #a20a3a; /* Darker text color for readability */
 }
 
 @media (max-width: 768px) {
