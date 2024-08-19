@@ -288,7 +288,7 @@ body::-webkit-scrollbar-thumb {
 }
 .projects {
   color: #1e2d54;
-  min-height: 60vh;
+  min-height: 40vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
