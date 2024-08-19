@@ -57,8 +57,8 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   background-color: #111e40;
   z-index: 100;
+  transition: top 0.3s ease; /* Add this for smooth hide/show effect */
 }
-
 .nav {
   display: flex;
   padding: 1rem;
@@ -71,12 +71,15 @@ body::-webkit-scrollbar-thumb {
   max-width: 100%;
 }
 
-.nav__close,
-.nav__toggle {
+.nav__toggle,
+.nav__close {
   display: flex;
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
+}
+.hidden-header {
+  top: -100%; /* Header is hidden when scrolled down */
 }
 
 @media screen and (max-width: 1150px) {
@@ -306,8 +309,6 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
 }
-
-
 
 .heading1 {
   font-size: 2rem; /* Adjust as needed */
@@ -547,6 +548,72 @@ hr {
   .contact-title {
     font-size: 1.5rem;
   }
+}
+
+/* ===========FOOTER SECTION ============== */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  background-color: #111e40;
+  padding: 1rem;
+  color: #ffffff;
+}
+
+.footer-logo {
+  width: 21rem;
+  height: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex-direction: column;
+}
+
+.footer-head {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.footer-desc {
+  color: #b1b1b1;
+  margin: 5px;
+  font-size: 1.1rem;
+}
+
+.footer-desc:hover {
+  color: #a20a3a;
+}
+
+.footer-section ul li svg {
+  color: #0085ff;
+}
+
+.footer-section hr {
+  border: none;
+  height: 1px;
+  width: 90px;
+  background-color: #a20a3a;
+  margin: 10px 0;
 }
 
 /* Media Queries for Responsive Design */
