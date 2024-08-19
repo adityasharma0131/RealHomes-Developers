@@ -279,7 +279,6 @@ body::-webkit-scrollbar-thumb {
 /* ========== ABOUT US SECTION ========== */
 .weare {
   color: #1e2d54;
-  min-height: 40vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
