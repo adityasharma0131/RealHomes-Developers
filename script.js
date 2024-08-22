@@ -41,10 +41,10 @@ window.addEventListener("scroll", () => {
 const projects = [
   {
     name: "Current Project 1",
-    location: "2-3BHK",
+    location: "1-2BHK",
     size: "THANE, 400023",
-    image: "prj6.png", // Using only the image file name
-    url: "https://example.com/project-1",
+    image: "Audumbar.png",
+    url: "Brochure/6_Audumbar_Brochure.pdf",
     section: "currentProjectsSection",
   },
   // {
@@ -76,7 +76,7 @@ const projects = [
     location: "THANE, 400604",
     size: "Luiswadi Wagle Estate",
     image: "prj1.png", // Using only the image file name
-    url: "https://example.com/upcoming-project-2",
+    url: "/",
     section: "upcomingProjectsSection",
   },
   {
@@ -84,7 +84,7 @@ const projects = [
     location: "THANE, 400602",
     size: "Pachpakhadi",
     image: "prj2.png", // Using only the image file name
-    url: "https://example.com/upcoming-project-2",
+    url: "/",
     section: "upcomingProjectsSection",
   },
   {
@@ -92,7 +92,7 @@ const projects = [
     location: "THANE -E, 400603",
     size: "KOPARI",
     image: "prj3.png", // Using only the image file name
-    url: "https://example.com/upcoming-project-2",
+    url: "/",
     section: "upcomingProjectsSection",
   },
   {
@@ -100,7 +100,7 @@ const projects = [
     location: "THANE, 400604",
     size: "Luiswadi Wagle Estate",
     image: "prj4.png", // Using only the image file name
-    url: "https://example.com/upcoming-project-2",
+    url: "/",
     section: "upcomingProjectsSection",
   },
   {
@@ -108,13 +108,13 @@ const projects = [
     location: "THANE, 411044",
     size: "Sainath Nagar Luiswadi",
     image: "prj5.png", // Using only the image file name
-    url: "https://example.com/upcoming-project-2",
+    url: "/",
     section: "upcomingProjectsSection",
   },
 ];
 
 projects.forEach((project) => {
-  const cardSection = document.getElementById(project.section); // Targeting the correct section
+  const cardSection = document.getElementById(project.section);
   const card = document.createElement("div");
   card.classList.add("card");
 
@@ -166,9 +166,13 @@ projects.forEach((project) => {
   showMoreSpan.title = "Show more details";
   showMoreSpan.textContent = "Show more";
 
-  // Add click event to navigate to the project's URL
+  // Add click event to navigate to the project's URL if it's provided
   showMoreSpan.addEventListener("click", () => {
-    window.size.href = project.url;
+    if (project.url) {
+      window.location.href = project.url;
+    } else {
+      alert("No URL provided for this project.");
+    }
   });
 
   cardData.appendChild(showMoreSpan);
@@ -176,5 +180,5 @@ projects.forEach((project) => {
   card.appendChild(cardForm);
   card.appendChild(cardData);
 
-  cardSection.appendChild(card); // Append to the correct section
+  cardSection.appendChild(card);
 });

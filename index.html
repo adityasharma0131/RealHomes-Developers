@@ -58,7 +58,7 @@
 
           <div class="nav__social">
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/real_homesdevelopers/"
               target="_blank"
               class="nav__social-link"
             >
@@ -66,7 +66,7 @@
             </a>
 
             <a
-              href="https://gmail.com/"
+              href="mailto:realhomedevelopers9@gmail.com"
               target="_blank"
               class="nav__social-link"
             >
@@ -153,15 +153,14 @@
         </div>
         <hr />
         <div class="card-section" id="currentProjectsSection"></div>
-        <!-- Changed the ID to differentiate sections -->
       </div>
+
       <div class="bgbox">
         <div class="project-heading">
           <h2 class="heading3">UPCOMING PROJECTS</h2>
         </div>
         <hr />
         <div class="card-section" id="upcomingProjectsSection"></div>
-        <!-- Changed the ID to differentiate sections -->
       </div>
     </div>
 
@@ -172,15 +171,26 @@
         Shoot us a message if you have any question, we're here to help!
       </p>
 
-      <form class="contact-form">
+      <form
+        class="contact-form"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
         <div class="form-field">
           <label for="name" class="form-label">Your Name</label>
           <input
+            type="hidden"
+            name="access_key"
+            value="a605ca34-b784-4611-aac2-8a5f29ce6257"
+          />
+          <input
             type="text"
+            name="name"
             id="name"
             class="form-input"
             placeholder="Enter your name"
             required
+            aria-label="Name"
           />
         </div>
 
@@ -189,42 +199,37 @@
           <input
             type="email"
             id="email"
+            name="Email"
             class="form-input"
-            placeholder="Enter your Email"
+            placeholder="Enter your email"
             required
+            aria-label="Email"
           />
         </div>
 
         <div class="form-field">
-          <label for="organization" class="form-label"
-            >Your Organization's Name</label
-          >
+          <label for="phone" class="form-label">Your Phone</label>
           <input
-            type="text"
-            id="organization"
+            type="tel"
+            name="PhoneNo."
+            id="phone"
             class="form-input"
-            placeholder="Enter Organization's Name"
+            placeholder="Enter your phone number"
+            required
+            aria-label="Phone"
           />
-        </div>
-
-        <div class="form-field">
-          <label for="subject" class="form-label">Select a Subject</label>
-          <select id="subject" class="form-select" required>
-            <option value="" disabled selected>Select a Subject</option>
-            <option value="general">General Inquiry</option>
-            <option value="support">Support</option>
-            <option value="feedback">Feedback</option>
-          </select>
         </div>
 
         <div class="form-field">
           <label for="message" class="form-label">Message</label>
           <textarea
             id="message"
+            name="Message"
             class="form-textarea"
             rows="5"
             placeholder="Write your message"
             required
+            aria-label="Message"
           ></textarea>
         </div>
 
@@ -286,7 +291,10 @@
                 </li>
                 <li>
                   <i class="ri-map-pin-line"></i>
-                  <a href="https://www.google.com/maps" class="footer-desc">
+                  <a
+                    href="https://www.google.co.in/maps/place/Omega+Business+Park/@19.2037254,72.9521011,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7b9f5c38d909d:0xbd382394b6bff4f7!8m2!3d19.2037254!4d72.954676!16s%2Fg%2F11ghfd4gys?entry=ttu"
+                    class="footer-desc"
+                  >
                     Google Location
                   </a>
                 </li>
@@ -297,19 +305,21 @@
           <ul>
             <li>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.9903823680174!2d72.88823237423584!3d19.108077850966627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c809aaaaaaab%3A0xd4e03f3e45ca9c8e!2sM.%20K.%20Hydraulics!5e0!3m2!1sen!2sin!4v1721629938948!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.804820733738!2d72.95467599999999!3d19.2037254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9f5c38d909d%3A0xbd382394b6bff4f7!2sOmega%20Business%20Park!5e0!3m2!1sen!2sin!4v1724338422171!5m2!1sen!2sin"
                 width="100%"
                 height="200"
                 style="border: 0; border-radius: 10px"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                title="M.K Hydraulics Location"
               ></iframe>
             </li>
           </ul>
         </div>
       </div>
+    </div>
+    <div class="bottom">
+      <h3>Designed & Developed By Vision a code</h3>
     </div>
 
     <!--=============== MAIN JS ===============-->

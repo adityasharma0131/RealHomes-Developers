@@ -569,15 +569,14 @@ hr {
 }
 
 .footer-logo {
-  width: 21rem;
-  height: 18rem;
+  width: 19rem;
+  height: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .footer-content {
-  padding: 20px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -614,6 +613,15 @@ hr {
   width: 90px;
   background-color: #a20a3a;
   margin: 10px 0;
+}
+
+.bottom {
+  background-color: #111e40;
+  color: #ede6db;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Media Queries for Responsive Design */
