@@ -41,49 +41,73 @@ window.addEventListener("scroll", () => {
 const projects = [
   {
     name: "Current Project 1",
-    size: "2-3BHK",
-    location: "THANE, 400023",
+    location: "2-3BHK",
+    size: "THANE, 400023",
+    image: "prj6.png", // Using only the image file name
+    url: "https://example.com/project-1",
+    section: "currentProjectsSection",
+  },
+  // {
+  //   name: "Current Project 1",
+  //   location: "2-3BHK",
+  //   size: "THANE, 400023",
+  //   image: "prj2.png", // Using only the image file name
+  //   url: "https://example.com/project-1",
+  //   section: "currentProjectsSection",
+  // },
+  // {
+  //   name: "Current Project 1",
+  //   location: "2-3BHK",
+  //   size: "THANE, 400023",
+  //   image: "prj3.png", // Using only the image file name
+  //   url: "https://example.com/project-1",
+  //   section: "currentProjectsSection",
+  // },
+  // {
+  //   name: "Current Project 1",
+  //   size: "2-3BHK",
+  //   size: "THANE, 400023",
+  //   image: "prj4.png", // Using only the image file name
+  //   url: "https://example.com/project-1",
+  //   section: "currentProjectsSection",
+  // },
+  {
+    name: "OM Anand",
+    location: "THANE, 400604",
+    size: "Luiswadi Wagle Estate",
     image: "prj1.png", // Using only the image file name
-    url: "https://example.com/project-1",
-    section: "currentProjectsSection",
-  },
-  {
-    name: "Current Project 1",
-    size: "2-3BHK",
-    location: "THANE, 400023",
-    image: "prj2.png", // Using only the image file name
-    url: "https://example.com/project-1",
-    section: "currentProjectsSection",
-  },
-  {
-    name: "Current Project 1",
-    size: "2-3BHK",
-    location: "THANE, 400023",
-    image: "prj3.png", // Using only the image file name
-    url: "https://example.com/project-1",
-    section: "currentProjectsSection",
-  },
-  {
-    name: "Current Project 1",
-    size: "2-3BHK",
-    location: "THANE, 400023",
-    image: "prj4.png", // Using only the image file name
-    url: "https://example.com/project-1",
-    section: "currentProjectsSection",
-  },
-  {
-    name: "Upcoming Project 2",
-    size: "5BHK",
-    location: "NAVI MUMBAI, 400709",
-    image: "prj5.png", // Using only the image file name
     url: "https://example.com/upcoming-project-2",
     section: "upcomingProjectsSection",
   },
   {
-    name: "Upcoming Project 2",
-    size: "5BHK",
-    location: "NAVI MUMBAI, 400709",
-    image: "prj6.png", // Using only the image file name
+    name: "Narsinha",
+    location: "THANE, 400602",
+    size: "Pachpakhadi",
+    image: "prj2.png", // Using only the image file name
+    url: "https://example.com/upcoming-project-2",
+    section: "upcomingProjectsSection",
+  },
+  {
+    name: "Shreyas",
+    location: "THANE -E, 400603",
+    size: "KOPARI",
+    image: "prj3.png", // Using only the image file name
+    url: "https://example.com/upcoming-project-2",
+    section: "upcomingProjectsSection",
+  },
+  {
+    name: "SRA",
+    location: "THANE, 400604",
+    size: "Luiswadi Wagle Estate",
+    image: "prj4.png", // Using only the image file name
+    url: "https://example.com/upcoming-project-2",
+    section: "upcomingProjectsSection",
+  },
+  {
+    name: "Dev Adi",
+    location: "THANE, 411044",
+    size: "Sainath Nagar Luiswadi",
+    image: "prj5.png", // Using only the image file name
     url: "https://example.com/upcoming-project-2",
     section: "upcomingProjectsSection",
   },
@@ -144,7 +168,7 @@ projects.forEach((project) => {
 
   // Add click event to navigate to the project's URL
   showMoreSpan.addEventListener("click", () => {
-    window.location.href = project.url;
+    window.size.href = project.url;
   });
 
   cardData.appendChild(showMoreSpan);
