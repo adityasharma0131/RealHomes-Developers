@@ -40,7 +40,7 @@ window.addEventListener("scroll", () => {
 });
 const projects = [
   {
-    name: "Current Project 1",
+    name: "Audumbar",
     location: "1-2BHK",
     size: "THANE, 400023",
     image: "Audumbar.png",
