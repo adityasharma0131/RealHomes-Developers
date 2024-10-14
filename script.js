@@ -42,7 +42,7 @@ const projects = [
   {
     name: "Audumbar",
     location: "1-2BHK",
-    size: "THANE, 400023",
+    size: "THANE, 400604",
     image: "Audumbar.png",
     url: "Brochure/6_Audumbar_Brochure.pdf",
     section: "currentProjectsSection",
